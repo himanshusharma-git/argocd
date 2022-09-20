@@ -12,12 +12,10 @@ spec:
     namespace: argocd 
   project: default
   source:
-    path: datadog-privatelocation 
-    repoURL: https://github.com/SnapLogic/dev-argocd-jobs.git
-    targetRevision: CO-1021
+    path: secrets-store-csi-driver
+    repoURL: https://github.com/himanshusharma-git/argocd.git
+    targetRevision: HEAD
   syncPolicy:
-    syncOptions:
-    - CreateNamespace=true
     automated:
       prune: true
       selfHeal: true
