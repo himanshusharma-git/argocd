@@ -1,0 +1,35 @@
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: data-dog-sa
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: datadog-cluster-role
+  namespace: datadog
+rules:
+  - apiGroups:
+        - ""
+        - apps
+    resources:
+      - pods
+      - deployments
+      - secrets
+      - daemonsets
+      - pods/exec
+    verbs: ["get", "list", "watch", "create", "update", "patch", "delete"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: datadog-cluster-role-binding
+subjects:
+- namespace: datadog
+  kind: ServiceAccount
+  name: data-dog-sa 
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: datadog-cluster-role

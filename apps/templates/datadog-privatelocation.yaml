@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: namespace-dd
+  name: datadog-privatelocation
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -12,9 +12,9 @@ spec:
       selfHeal: true
   project: default
   source:
-    repoURL: https://github.com/SnapLogic/SnapInfra.git
+    repoURL: https://github.com/himanshusharma-git/argocd.git
     targetRevision: HEAD
-    path: namespace
+    path: datadog-privatelocation
   destination:
     name: in-cluster
-    namespace: default
+    namespace: datadog

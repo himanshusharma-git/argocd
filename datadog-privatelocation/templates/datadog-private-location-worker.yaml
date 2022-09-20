@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: datadog-private-location-worker
+spec:
+  selector:
+    matchLabels:
+      app: private-location
+  template:
+    metadata:
+      labels:
+        app: private-location
+      name: datadog-private-location-worker
+    spec:
+      containers:
+      - image: datadog/synthetics-private-location-worker
+        imagePullPolicy: Always
+        name: datadog-private-location-worker
+        volumeMounts:
+        - mountPath: /etc/datadog/synthetics-check-runner.json
+          name: worker-config
+          subPath: worker-config.json
+      volumes:
+      - name: worker-config
+        secret:
+          secretName: private-location-worker-config
