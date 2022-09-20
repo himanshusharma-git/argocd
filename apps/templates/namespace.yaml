@@ -14,7 +14,7 @@ spec:
   source:
     repoURL: https://github.com/SnapLogic/SnapInfra.git
     targetRevision: HEAD
-    path: namespace/
+    path: namespace
   destination:
     name: in-cluster
     namespace: default
