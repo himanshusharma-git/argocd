@@ -3,16 +3,17 @@ kind: Application
 metadata:
   name: csi-driver-dd
   finalizers:
-    - resources-finalizer.argocd.argoproj.io
+  - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
+      #server: in-cluster
     server: https://kubernetes.default.svc
-    namespace: argocd
+    namespace: argocd 
   project: default
   source:
-    path: secrets-store-csi-driver
+    path: apps/
     repoURL: https://github.com/himanshusharma-git/argocd.git
-    targetRevision: main
+    targetRevision: HEAD
   syncPolicy:
     automated:
       prune: true
