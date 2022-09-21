@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: root-csi-driver-datadog
+  name: prod-csi-driver-datadog
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
@@ -10,7 +10,7 @@ spec:
     namespace: datadog
   project: default
   source:
-    path: apps-dev
+    path: apps-prod
     repoURL: https://github.com/himanshusharma-git/argocd.git
     targetRevision: HEAD
   syncPolicy:
