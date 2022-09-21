@@ -19,7 +19,7 @@ spec:
     path: argocd/datadog-privatelocation
     helm:
       valueFiles:
-        - values.yaml
+        - prod-values.yaml
   destination:
     name: in-cluster
     namespace: datadog

@@ -17,6 +17,9 @@ spec:
     repoURL: https://github.com/himanshusharma-git/argocd.git
     targetRevision: HEAD
     path: datadog-privatelocation
+    helm:
+      valueFiles:
+        - dev-values.yaml
   destination:
     name: in-cluster
     namespace: datadog
