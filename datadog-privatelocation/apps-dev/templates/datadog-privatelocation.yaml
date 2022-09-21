@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: secrets-store-csi-driver 
+  name: datadog-privatelocation
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -10,11 +10,13 @@ spec:
     automated:
       prune: true
       selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
   project: default
   source:
-    repoURL: https://github.com/himanshusharma-git/argocd.git
+    repoURL: https://github.com/SnapLogic/SnapInfra.git
     targetRevision: HEAD
-    path: secrets-store-csi-driver
+    path: datadog-privatelocation
   destination:
     name: in-cluster
     namespace: datadog

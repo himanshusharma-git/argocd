@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: csi-driver-dd
+  name: root-csi-driver-datadog
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
@@ -11,7 +11,7 @@ spec:
   project: default
   source:
     path: apps/
-    repoURL: https://github.com/himanshusharma-git/argocd.git
+    repoURL: https://github.com/SnapLogic/SnapInfra.git
     targetRevision: HEAD
   syncPolicy:
     automated:
