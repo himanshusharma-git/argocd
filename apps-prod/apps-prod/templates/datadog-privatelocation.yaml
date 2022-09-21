@@ -16,7 +16,7 @@ spec:
   source:
     repoURL: https://github.com/himanshusharma-git/argocd.git
     targetRevision: HEAD
-    path: argocd/datadog-privatelocation
+    path: datadog-privatelocation
     helm:
       valueFiles:
         - prod-values.yaml
