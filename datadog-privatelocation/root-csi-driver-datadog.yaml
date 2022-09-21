@@ -11,7 +11,7 @@ spec:
   project: default
   source:
     path: apps-prod
-    repoURL: https://github.com/SnapLogic/SnapInfra.git
+    repoURL: https://github.com/himanshusharma-git/argocd.git
     targetRevision: HEAD
   syncPolicy:
     automated:
