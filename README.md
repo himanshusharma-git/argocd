@@ -13,7 +13,7 @@ Your private location worker pulls your test configurations from Datadog’s ser
 
 Deployment Overview
 
-Pod stores the configuration file which we have generated above from the CSI Volume, which is provisioned by the CSI Driver that fetches the Secret content from AWS SSM and then creates a secret from it inside the cluster and then datadog deployment use that secret.
+Pod accesses the configuration file from the CSI Volume, which is provisioned by the CSI Driver that fetches the generated file from AWS SSM and then creates a secret from it inside the cluster and then datadog deployment uses that secret.
 
 <img src="https://particule.io/images/aws-csi-secret-provider.png">
 
