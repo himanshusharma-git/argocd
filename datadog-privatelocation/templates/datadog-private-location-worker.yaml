@@ -18,7 +18,7 @@ spec:
         name: datadog-private-location-worker
         volumeMounts:
         - mountPath: /etc/datadog/synthetics-check-runner.json
-          name: _admin_datadog_properties_file
+          name: secrets-store-inline
           subPath: _admin_datadog_properties_file.json
       volumes:
       - name: secrets-store-inline
