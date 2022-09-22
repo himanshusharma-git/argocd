@@ -6,6 +6,7 @@ Run Synthetic Tests from Private Locations
 Overview
 
 Private locations allow you to monitor internal-facing applications or any private endpoints that aren’t accessible from the public internet.
+Your private location worker pulls your test configurations from Datadog’s servers using HTTPS, executes the test on a schedule or on-demand, and returns the test results to Datadog’s servers. You can then visualize your private locations test results in a completely identical manner to how you would visualize tests running from managed locations.
 
 <img src="https://datadog-docs.imgix.net/images/synthetics/private_locations/pl_view_file_1.808a2c3820f9b3e209bb98d9a63d3481.png">
 
