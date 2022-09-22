@@ -12,6 +12,7 @@ spec:
         app: private-location
       name: datadog-private-location-worker
     spec:
+      serviceAccountName: datadog
       containers:
       - image: datadog/synthetics-private-location-worker
         imagePullPolicy: Always
