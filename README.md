@@ -13,6 +13,6 @@ Above generated configuration file is in json format and we have stored it in ss
 
 Our pod accesses the configfile which we have generated above from the CSI Volume, which is provisioned by the CSI Driver that fetches the Secret content from AWS SSM and then creates a secret from it and mount it with Datadog private location deployment. 
 
-<img src=https://particule.io/images/aws-csi-secret-provider.png">
+<img src="https://particule.io/images/aws-csi-secret-provider.png">
 
 
