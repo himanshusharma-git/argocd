@@ -1,3 +1,5 @@
+![Screenshot](dd_logo_n_70x75.png)
+
 
 Run Synthetic Tests from Private Locations
 
