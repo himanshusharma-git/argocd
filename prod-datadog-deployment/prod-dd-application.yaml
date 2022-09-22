@@ -10,7 +10,7 @@ spec:
     namespace: datadog
   project: default
   source:
-    path: apps-prod
+    path: prod-datadog-deployment
     repoURL: https://github.com/himanshusharma-git/argocd.git
     targetRevision: HEAD
   syncPolicy:
