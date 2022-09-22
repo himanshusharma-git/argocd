@@ -18,9 +18,12 @@ spec:
         name: datadog-private-location-worker
         volumeMounts:
         - mountPath: /etc/datadog/synthetics-check-runner.json
-          name: worker-config
-          subPath: worker-config.json
+          name: _admin_datadog_properties_file
+          subPath: _admin_datadog_properties_file.json
       volumes:
-      - name: worker-config
-        secret:
-          secretName: private-location-worker-config
+      - name: secrets-store-inline
+        csi:
+          driver: secrets-store.csi.k8s.io
+          readOnly: true
+          volumeAttributes:
+            secretProviderClass: "datadog-ssm" 
