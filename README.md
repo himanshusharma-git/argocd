@@ -9,9 +9,8 @@ Private locations allow you to monitor internal-facing applications or any priva
 
 <img src="https://datadog-docs.imgix.net/images/synthetics/private_locations/pl_view_file_1.808a2c3820f9b3e209bb98d9a63d3481.png">
 
-Above generated configuration file is in json format and we have stored it in ssm parameter as it stores API key/Secret/Certificate. To fetch the ssm parameter inside cluster we are using secrets-store-csi-driver and mounting it to a pod for creating a secret with configuration file so DataDog agent can run with given configuration.
 
-Our pod accesses the configfile which we have generated above from the CSI Volume, which is provisioned by the CSI Driver that fetches the Secret content from AWS SSM and then creates a secret from it and mount it with Datadog private location deployment. 
+Pod stores the configuration file which we have generated above from the CSI Volume, which is provisioned by the CSI Driver that fetches the Secret content from AWS SSM and then creates a secret from it inside the cluster and then datadog deployment use that secret.
 
 <img src="https://particule.io/images/aws-csi-secret-provider.png">
 
