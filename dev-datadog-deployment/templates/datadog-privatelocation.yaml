@@ -14,9 +14,9 @@ spec:
     - CreateNamespace=true
   project: default
   source:
-    repoURL: https://github.com/himanshusharma-git/argocd.git
-    targetRevision: HEAD
-    path: datadog-privatelocation
+    repoURL: https://github.com/SnapLogic/SnapInfra.git
+    targetRevision: CO-1021
+    path: datadog-privatelocation/datadog-privatelocation
     helm:
       valueFiles:
         - dev-values.yaml
