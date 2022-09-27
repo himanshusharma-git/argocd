@@ -10,9 +10,9 @@ spec:
     namespace: datadog
   project: default
   source:
-    path: dev-datadog-deployment
-    repoURL: https://github.com/himanshusharma-git/argocd.git
-    targetRevision: HEAD
+    path: datadog-privatelocation/dev-datadog-deployment
+    repoURL: https://github.com/SnapLogic/SnapInfra.git
+    targetRevision: CO-1021
   syncPolicy:
     automated:
       prune: true
