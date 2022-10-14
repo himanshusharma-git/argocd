@@ -15,8 +15,8 @@ spec:
   project: default
   source:
     repoURL: https://github.com/SnapLogic/SnapInfra.git
-    targetRevision: CO-1021
-    path: datadog-privatelocation/datadog-privatelocation
+    targetRevision: CO-1074
+    path: datadog-privatelocation/prod-datadog-privatelocation
     helm:
       valueFiles:
         - prod-values.yaml
